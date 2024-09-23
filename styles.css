@@ -1,0 +1,390 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul.active {
+        display: block;
+    }
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Mobile menu toggle functionality */
+#mobile-menu-toggle.active + ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Remove dots CSS, since they are no longer needed */
+
+/* CSS for the About Section*/
+.about-section {
+    background-color: #f8e7ee; /* Feminine passionate color */
+    background-image: url('path-to-fallen-leaves-effect.png'); /* Add fallen leaves background */
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-text h4 {
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+.about-section p, .about-section ul {
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* Artists Section */
+.artists-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.artist-card {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.artist-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artist-card h3 {
+    margin: 15px 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.artist-card p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Featuring Artists Section */
+.featuring-artists-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.featuring-artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.featuring-artists-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.featuring-artist-grid .artist-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featuring-artist-grid .artist-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.featuring-artist-grid .artist-card h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Powerful Hover Effect */
+.featuring-artist-grid .artist-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featuring-artist-grid .artist-card:hover img {
+    transform: scale(1.1);
+}
+
+.featuring-artist-grid .artist-card:hover h3 {
+    background-color: rgba(255, 111, 97, 0.8);
+}
+
+/* Sponsor Section Styling */
+.sponsor-section{
+    text-align: center;
+}
+.sponsor-carousel {
+    overflow: hidden; /* Hide overflow to create a scrolling window */
+    width: 100%;
+    position: relative;
+    height: 100px; /* Set the height for the carousel */
+}
+
+.sponsor-track {
+    display: flex;
+    width: max-content; /* Ensure content stretches horizontally */
+    animation: scrollSponsors 20s linear infinite; /* 2-way smooth scrolling */
+}
+
+.sponsor-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 120px; /* Adjust this to the size of the sponsor images */
+}
+
+.sponsor-card img {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-card img:hover {
+    transform: scale(1.1); /* Hover effect for enlarging the logos */
+}
+
+/* Keyframes for bidirectional scrolling of sponsor logos */
+@keyframes scrollSponsors {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    50% {
+        transform: translateX(-50%); /* Move halfway (adjust based on the total length of logos) */
+    }
+    100% {
+        transform: translateX(0); /* Scroll back to start */
+    }
+}
+
+
+
+/* Contact Section */
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #ff6f61;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer p a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
