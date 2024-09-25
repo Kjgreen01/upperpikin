@@ -4,6 +4,17 @@ document.getElementById('mobile-menu-toggle').addEventListener('click', function
     navLinks.classList.toggle('active');
 });
 
+//NEW//
+// Show or hide the "Back to Top" button on scroll
+window.onscroll = function() {
+    var backToTopBtn = document.getElementById('backToTopBtn');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
 
 /* Slideshow */
 let slideIndex = 0;

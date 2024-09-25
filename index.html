@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="REALUPPERPIKIN WEBSITE">
-    <title>&#128151; REALUPPERPIKIN - Homepage</title>
-    <link rel="shortcut icon" href="./images/logo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="REALUPPERPIKIN WEBSITE">
+        <title>&#128151; REALUPPERPIKIN - Homepage</title>
+        <link rel="shortcut icon" href="./images/logo2.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
+    <!-- Go Back to Top Button -->
+    <a id="backToTopBtn" href="#top">&#8679; </a>
+
+    <!-- WhatsApp Chat Tool -->
+    <a href="https://wa.me/2349128132800" target="_blank" id="whatsappChat">
+        <img src="./images/whatsapp-icon.png" alt="WhatsApp Chat">
+    </a>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -123,29 +131,36 @@
             <h2>Ticket Policies Available</h2>
             <div class="artist-grid">
                 <div class="artist-card">
-                    <img src="./images/img1a.jpg" alt="REGULAR">
+                    <a href="payment.html">
+                        <img src="./images/img1a.jpg" alt="REGULAR">
+                    </a>
                     <h3>REGULAR</h3>
                     <p>10,000 Naira</p>
                 </div>
                 <div class="artist-card">
-                    <img src="./images/img2a.jpg" alt="VIP">
+                    <a href="payment.html">
+                        <img src="./images/img2a.jpg" alt="VIP">
+                    </a>
                     <h3>VIP</h3>
                     <p>20,000 Naira</p>
                 </div>
                 <div class="artist-card">
-                    <img src="./images/img3a.jpg" alt="PREMIER">
+                    <a href="payment.html">
+                        <img src="./images/img3a.jpg" alt="PREMIER">
+                    </a>
                     <h3>PREMIER</h3>
                     <p>100,000 Naira</p>
                 </div>
                 <div class="artist-card">
-                    <img src="./images/img4a.jpg" alt="SPONSORSHIP">
+                    <a href="payment.html">
+                        <img src="./images/img4a.jpg" alt="SPONSORSHIP">
+                    </a>
                     <h3>SPONSORSHIP</h3>
                     <p>200,000 Naira</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- FEATURING ARTIST SECTION -->
     <!-- Add this new section below the Artists section -->
@@ -236,10 +251,11 @@ class="sponsor-section">
 </section>
   
 <br>
+    <!-- Contact Us Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2>Contact Us</h2>
-            <form action="#" method="post">
+            <form action="mailto:kenaxengr.rodney@outlook.com" method="post" enctype="text/plain">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Message" required></textarea>
