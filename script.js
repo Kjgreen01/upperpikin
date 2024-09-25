@@ -57,6 +57,17 @@ const sponsors = [
 
 ];
 
+//VIDEO SECTION PLAY NEXT//
+    const video = document.getElementById('myVideo');
+    const sources = Array.from(video.getElementsByTagName('source'));
+    let currentIndex = 0;
+
+    video.addEventListener('ended', () => {
+        currentIndex = (currentIndex + 1) % sources.length;
+        video.src = sources[currentIndex].src;
+        video.play();
+    });
+
 // Get the container for sponsor logos
 const sponsorContainer = document.getElementById('sponsor-logos');
 

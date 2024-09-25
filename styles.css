@@ -117,11 +117,17 @@ header nav ul li a:hover {
 
 /* CSS for the About Section*/
 .about-section {
-    background-color: #f8e7ee; /* Feminine passionate color */
-    background-image: url('path-to-fallen-leaves-effect.png'); /* Add fallen leaves background */
-    background-size: cover;
+    background-color: rgba(250, 197, 219, 0); /* Feminine passionate color */
+    background-image: url('./images/fheart.gif'); /* Add fallen leaves background */
+    background-size:contain;
     padding: 60px 0;
     text-align: center;
+}
+
+.about-section h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:xx-large;
+    color: #d63384d5;
 }
 
 .about-content {
@@ -263,8 +269,8 @@ header nav ul li a:hover {
     bottom: 10px;
     left: 10px;
     color: white;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+    background-color: rgba(120, 115, 115, 0.7);
     padding: 5px 10px;
     border-radius: 5px;
     margin: 0;
@@ -274,7 +280,7 @@ header nav ul li a:hover {
 /* Powerful Hover Effect */
 .featuring-artist-grid .artist-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(203, 189, 189, 0.368);
 }
 
 .featuring-artist-grid .artist-card:hover img {
@@ -282,7 +288,7 @@ header nav ul li a:hover {
 }
 
 .featuring-artist-grid .artist-card:hover h3 {
-    background-color: rgba(255, 111, 97, 0.8);
+    background-color: rgba(191, 35, 35, 0.626);
 }
 
 /* Sponsor Section Styling */
