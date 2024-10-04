@@ -1,17 +1,3 @@
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /*NEW*/
 /* General Styles */
 body, html {
@@ -30,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    position: sticky;
+    position:sticky;
     top: 0;
     z-index: 1000;
 }
@@ -62,6 +48,11 @@ header {
     right: 30px;
     z-index: 1000;
 }
+
+#whatsappChat:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 8px 16px rgba(203, 189, 189, 0.368);
+    }
 
 #whatsappChat img {
     width: 30px;
@@ -381,10 +372,11 @@ header nav ul li a:hover {
     text-align: center;
 }
 .sponsor-carousel {
-    overflow: hidden; /* Hide overflow to create a scrolling window */
+    overflow:visible; /* Hide overflow to create a scrolling window */
     width: 100%;
     position: relative;
     height: 100px; /* Set the height for the carousel */
+
 }
 
 .sponsor-track {
