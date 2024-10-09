@@ -11,7 +11,7 @@ body, html {
 header {
     background-color: #111;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -372,7 +372,7 @@ header nav ul li a:hover {
     text-align: center;
 }
 .sponsor-carousel {
-    overflow:visible; /* Hide overflow to create a scrolling window */
+    overflow:hidden; /* Hide overflow to create a scrolling window */
     width: 100%;
     position: relative;
     height: 100px; /* Set the height for the carousel */
@@ -390,12 +390,12 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    min-width: 120px; /* Adjust this to the size of the sponsor images */
+    min-width: 20px; /* Adjust this to the size of the sponsor images */
 }
 
 .sponsor-card img {
-    max-width: 100px; /* Adjust logo size */
-    height: auto;
+    max-width: 100%; /* Adjust logo size */
+    height: 90px;
     transition: transform 0.3s ease;
 }
 
