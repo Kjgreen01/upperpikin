@@ -53,3 +53,32 @@ function showSlides() {
     // Set the slideshow to change every 10 seconds
     setTimeout(showSlides, 10000); // Change image every 10 seconds
 }
+
+/* VIDEO SECTION */
+// If you want to control the video programmatically, you can use the YouTube API
+// Here's an example of how to load the YouTube API and control the video
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-player', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    // You can add controls here
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('play-button');
+    playButton.addEventListener('click', () => {
+        player.playVideo();
+    });
+
+    const pauseButton = document.getElementById('pause-button');
+    pauseButton.addEventListener('click', () => {
+        player.pauseVideo();
+    });
+});
