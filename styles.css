@@ -36,8 +36,8 @@ body, html {
 }
 
 #whatsappChat:hover {
-        transform: translateY(-15px);
-        box-shadow: 0 8px 16px rgba(203, 189, 189, 0.368);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 8px rgba(203, 189, 189, 0);
     }
 
 #whatsappChat img {
