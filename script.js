@@ -15,17 +15,25 @@ window.onscroll = function() {
     }
 };
 
+/* HEADER FUNCTION */
+const header = document.querySelector('header');
 
-/* Slideshow */
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});
+
+
+
+/*BANNER SLIDESHOW*/
 let slideIndex = 0;
 showSlides();
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
 }
 
 function showSlides() {
@@ -37,15 +45,10 @@ function showSlides() {
     }
 
     // Increment the slide index
-    slideIndex++;
-
-    // Reset slide index if it exceeds the number of slides
-    if (slideIndex > slides.length) { 
-        slideIndex = 1; 
-    }    
+    slideIndex = (slideIndex + 1) % slides.length; // Loop back to the first slide if at the end
 
     // Display the current slide
-    slides[slideIndex - 1].style.display = "block";  
+    slides[slideIndex].style.display = "block";  
 
     // Set the slideshow to change every 10 seconds
     setTimeout(showSlides, 10000); // Change image every 10 seconds

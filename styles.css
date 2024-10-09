@@ -7,20 +7,6 @@ body, html {
     color: #333;
 }
 
-/* Sticky Header */
-header {
-    background-color: #111;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position:sticky;
-    top: 0;
-    z-index: 1000;
-}
-
 /* Back to Top Button */
 #backToTopBtn {
     position: fixed;
@@ -61,47 +47,44 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Rest of the Styles */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.mobile-menu-toggle {
-    display: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: block;
-    }
-}
-
-/* Artists Section */
-.artist-card a {
-    display: block;
-}
-
-
-
 /* Header */
 header {
-    background-color: #111;
+    background-color: #1b1a1a;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    position: fixed; /* Make header fixed */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.h1head {
+    margin: 0 20px; /* Center spacing between logo and heading */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.logo {
+    height: 70px; /* Adjust height for a smaller header */
+    width: auto;
+}
+
+header.shrink {
+    padding: 5px 10px; /* Reduce padding when shrunk */
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 18px; /* Adjust font size for smaller header */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
 }
 
 header nav ul {
@@ -113,47 +96,78 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #d2180a;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease;
+    padding: 2px 5px; /* Added padding for clickable area */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #ff6f61;
+    background-color: #ff6e61a4; /* Background on hover */
+    color: #fff; /* Maintain text color */
 }
 
 /* Mobile Menu */
 .mobile-menu-toggle {
     display: none;
-    font-size: 30px;
-    color: #fff;
+    font-size: 20px;
+    color: #bb0e0e;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start */
+    }
+
     header nav ul {
         flex-direction: column;
         display: none;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
+
     header nav ul.active {
-        display: block;
+        display: flex; /* Show active menu */
     }
+
     .mobile-menu-toggle {
-        display: block;
+        display: block; /* Show mobile menu toggle */
+    }
+
+    .logo {
+        height: 50px; /* Smaller logo on mobile */
+    }
+
+    header h1 {
+        font-size: 16px; /* Smaller font size on mobile */
     }
 }
 
-/* Mobile menu toggle functionality */
-#mobile-menu-toggle.active + ul {
-    display: flex;
-    flex-direction: column;
+/* Adjust body margin to ensure content is below the fixed header */
+body {
+    margin-top: 150px; /* Adjust based on header height */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* BANNER */
+.banner {
+    position: relative;
+    margin: 40px;
 }
 
 /* Slideshow */
@@ -171,13 +185,12 @@ header nav ul li a:hover {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     background-color: rgba(0,0,0,0.5);
+    transform: translateY(-50%);
     user-select: none;
 }
 
@@ -188,8 +201,6 @@ header nav ul li a:hover {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
-
-/* Remove dots CSS, since they are no longer needed */
 
 /* CSS for the About Section*/
 .about-section {
@@ -221,11 +232,29 @@ header nav ul li a:hover {
     margin-right: 20px;
 }
 
+.about-image {
+    overflow: hidden; /* Ensure image doesn't overflow the container */
+    position: relative; /* Establish a positioning context */
+}
+
 .about-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(164, 4, 4, 0.418);
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
 }
+
+.about-image:hover img {
+    transform: scale(1.05); /* Scale image slightly on hover */
+}
+
+/* Optional: Continuous responsive effect */
+@media (max-width: 768px) {
+    .about-image img {
+        transform: scale(1.02); /* Slight scaling for smaller screens */
+    }
+}
+
 
 .about-text {
     flex: 2;
@@ -248,6 +277,7 @@ header nav ul li a:hover {
     list-style-type: disc;
 }
 
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -265,6 +295,8 @@ header nav ul li a:hover {
 }
 
 /* Artists Section */
+
+
 .artists-section {
     padding: 60px 0;
     text-align: center;
@@ -281,6 +313,10 @@ header nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card a {
+    display: block;
 }
 
 .artist-card:hover {
