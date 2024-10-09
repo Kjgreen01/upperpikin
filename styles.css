@@ -302,7 +302,9 @@ body {
 .artists-section {
     padding: 20px 0;
     text-align: center;
-}.video-section {
+}
+
+.video-section {
     padding: 40px 0;
     text-align: center;
     background-color: #f9f9f9; /* Optional background color */
@@ -327,8 +329,7 @@ body {
     width: 100%;
     height: 100%;
 }
-
-
+/*TICKET POLICIES*/
 .artist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
