@@ -235,6 +235,7 @@ body {
 .about-image {
     overflow: hidden; /* Ensure image doesn't overflow the container */
     position: relative; /* Establish a positioning context */
+    float: left;
 }
 
 .about-image img {
@@ -298,7 +299,7 @@ body {
 
 
 .artists-section {
-    padding: 60px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -404,15 +405,16 @@ body {
 }
 
 /* Sponsor Section Styling */
-.sponsor-section{
+.sponsor-section {
     text-align: center;
+    margin: 30px;
 }
+
 .sponsor-carousel {
-    overflow:hidden; /* Hide overflow to create a scrolling window */
+    overflow: hidden; /* Hide overflow to create a scrolling window */
     width: 100%;
     position: relative;
-    height: 100px; /* Set the height for the carousel */
-
+    height: auto; /* Allow height to adjust based on content */
 }
 
 .sponsor-track {
@@ -426,12 +428,13 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    min-width: 20px; /* Adjust this to the size of the sponsor images */
+    min-width: 100px; /* Set a min-width for logos */
 }
 
 .sponsor-card img {
-    max-width: 100%; /* Adjust logo size */
-    height: 90px;
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 90px; /* Limit height */
     transition: transform 0.3s ease;
 }
 
@@ -445,10 +448,31 @@ body {
         transform: translateX(0); /* Start position */
     }
     50% {
-        transform: translateX(-50%); /* Move halfway (adjust based on the total length of logos) */
+        transform: translateX(-70%); /* Move halfway */
     }
     100% {
         transform: translateX(0); /* Scroll back to start */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sponsor-card {
+        min-width: 80px; /* Smaller min-width for mobile */
+    }
+    
+    .sponsor-card img {
+        max-height: 70px; /* Adjust image height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-card {
+        min-width: 60px; /* Even smaller for very small screens */
+    }
+
+    .sponsor-card img {
+        max-height: 60px; /* Further adjust height */
     }
 }
 
