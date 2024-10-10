@@ -432,6 +432,7 @@ body {
     background-color: rgba(191, 35, 35, 0.626);
 }
 
+
 /* Sponsor Section Styling */
 .sponsor-section {
     text-align: center;
@@ -476,7 +477,7 @@ body {
         transform: translateX(0); /* Start position */
     }
     50% {
-        transform: translateX(-70%); /* Move halfway */
+        transform: translateX(-80%); /* Move halfway */
     }
     100% {
         transform: translateX(0); /* Scroll back to start */
