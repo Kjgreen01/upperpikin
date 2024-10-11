@@ -64,14 +64,24 @@ header {
 }
 
 .h1head {
-    margin: 0 20px; /* Center spacing between logo and heading */
     white-space: nowrap; /* Prevent text wrapping */
 }
 
+.containerhead {
+    display: flex;
+    margin: 5px 40px;
+}
+
 .logo {
-    height: 70px; /* Adjust height for a smaller header */
+    height: 80px; /* Adjust height for a smaller header */
     width: auto;
 }
+
+
+.logo:hover {
+    opacity: 0.7;
+}
+
 
 header.shrink {
     padding: 5px 10px; /* Reduce padding when shrunk */
@@ -91,12 +101,11 @@ header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    align-items: center;
     margin: 0;
 }
 
 header nav ul li {
-    margin: 10px 15px;
+    margin: 5px 5px;
 }
 
 header nav ul li a {
@@ -117,14 +126,14 @@ header nav ul li a:hover {
 .mobile-menu-toggle {
     display: none;
     font-size: 20px;
-    color: #bb0e0e;
+    color: #a90e0e;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     header nav {
         flex-direction: column;
-        align-items: flex-start; /* Align items to start */
+        align-items: start; /* Align items to start */
     }
 
     header nav ul {
@@ -139,11 +148,11 @@ header nav ul li a:hover {
     }
 
     .mobile-menu-toggle {
-        display: block; /* Show mobile menu toggle */
+        display:block; /* Show mobile menu toggle */
     }
 
     .logo {
-        height: 50px; /* Smaller logo on mobile */
+        height: 80px; /* Smaller logo on mobile */
     }
 
     header h1 {
@@ -167,7 +176,7 @@ body {
 /* BANNER */
 .banner {
     position: relative;
-    margin: 20px;
+    margin: 10px;
 }
 
 /* Slideshow */
