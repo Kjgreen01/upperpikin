@@ -49,12 +49,11 @@ body, html {
 
 /* Header */
 header {
-    background-color: #1b1a1a;
+    background-color: #1d0303;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: fixed; /* Make header fixed */
     top: 0; /* Stick to the top */
     left: 0;
@@ -65,11 +64,13 @@ header {
 
 .h1head {
     white-space: nowrap; /* Prevent text wrapping */
+    margin-top: 25px;
+    font-size: 20px;
 }
 
 .containerhead {
     display: flex;
-    margin: 5px 40px;
+    margin: 10px 9px;
 }
 
 .logo {
@@ -89,7 +90,12 @@ header.shrink {
 
 header h1 {
     margin: 0;
-    font-size: 18px; /* Adjust font size for smaller header */
+    font-size: 30px; /* Adjust font size for smaller header */
+}
+
+.navlinks {
+    margin-top: 50px;
+
 }
 
 header nav {
@@ -125,7 +131,7 @@ header nav ul li a:hover {
 /* Mobile Menu */
 .mobile-menu-toggle {
     display: none;
-    font-size: 20px;
+    font-size: 30px;
     color: #a90e0e;
     cursor: pointer;
 }
@@ -551,7 +557,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #111;
+    background-color: #1d0303;;
     color: #fff;
     padding: 20px 0;
     text-align: center;
