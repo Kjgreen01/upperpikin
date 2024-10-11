@@ -579,12 +579,20 @@ footer p a:hover {
 /*PAYMENT*/
 
 .paymentsec {
-    border: solid #1d0303;
     height: 418px;
     background-color: #a7636367;
     overflow: auto;
+    text-align: center;
+
 }
 
 .payico {
     display: block;
+    
+}
+
+.payico a {
+    color: #d2180a;
+    text-decoration: none;
+    font-size: 36px;
 }
