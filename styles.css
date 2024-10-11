@@ -576,23 +576,30 @@ footer p a:hover {
 }
 
 
-/*PAYMENT*/
+/*PAYMENT HTML*/
 
 .paymentsec {
-    height: 418px;
-    background-color: #a7636367;
-    overflow: auto;
-    text-align: center;
-
-}
-
-.payico {
     display: block;
-    
+    height: 450px;
+    background-color: #a7636367;
+    text-align: center;
+    overflow: auto;
+
 }
 
 .payico a {
     color: #d2180a;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 28px;
+}
+
+.paydiv {
+    margin: 60px;
+    text-align:right;
+}
+
+.upperpay {
+    float: left;
+    height: 200px;
+
 }
