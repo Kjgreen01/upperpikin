@@ -610,3 +610,4 @@ footer p a:hover {
     background-image: url('./images/upper2.png'); /* Initial background image */
     background-size: cover; /* Cover the entire area of the element */
     transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
