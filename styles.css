@@ -94,7 +94,8 @@ header h1 {
 }
 
 .navlinks {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
 
 }
 
@@ -145,8 +146,6 @@ header nav ul li a:hover {
     header nav ul {
         flex-direction: column;
         display: none;
-        width: 100%;
-        text-align: left;
     }
 
     header nav ul.active {
@@ -168,7 +167,7 @@ header nav ul li a:hover {
 
 /* Adjust body margin to ensure content is below the fixed header */
 body {
-    margin-top: 150px; /* Adjust based on header height */
+    margin-top: 100px; /* Adjust based on header height */
 }
 
 /* Container */
@@ -181,7 +180,7 @@ body {
 
 /* BANNER */
 .banner {
-    position: relative;
+    display: block;
     margin: 10px;
 }
 
@@ -574,4 +573,18 @@ footer p a {
 
 footer p a:hover {
     text-decoration: underline;
+}
+
+
+/*PAYMENT*/
+
+.paymentsec {
+    border: solid #1d0303;
+    height: 418px;
+    background-color: #a7636367;
+    overflow: auto;
+}
+
+.payico {
+    display: block;
 }
