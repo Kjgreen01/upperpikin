@@ -594,15 +594,17 @@ footer p a:hover {
 
 .paydiv {
     margin: 60px;
-    text-align:right;
+    text-align:left;
+    margin-left: 10px;
 }
 
 .upperpay {
     float: left;
-    height: 300px;
+    height: 330px;
     width: auto;
-    border: solid rgba(191, 100, 100, 0.189);
-
+    border: solid rgba(191, 100, 100, 0.087);
+    border-radius: 30px;
+    margin: 20px;
 }
 
 .upperpay:hover {
