@@ -52,25 +52,29 @@ header {
     background-color: #1d0303;
     color: #fff;
     padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     position: fixed; /* Make header fixed */
     top: 0; /* Stick to the top */
     left: 0;
-    right: 0;
     z-index: 1000; /* Ensure it's above other content */
     transition: all 0.3s ease; /* Smooth transition */
 }
 
 .h1head {
-    white-space: nowrap; /* Prevent text wrapping */
-    margin-top: 25px;
     font-size: 20px;
+}
+
+.headcont {
+    display: flex;
+    align-items: center;
 }
 
 .containerhead {
     display: flex;
     margin: 10px 9px;
+    justify-content: space-between;
+    max-width: 100%;
+
 }
 
 .logo {
@@ -587,7 +591,7 @@ footer p a:hover {
 }
 
 .payico a {
-    color: #d2180a;
+    color: #C42F1C;
     text-decoration: none;
     font-size: 28px;
 }
