@@ -314,18 +314,11 @@ body {
 }
 
 
-/* Artists Section */
-
-
-.artists-section {
-    padding: 20px 0;
-    text-align: center;
-}
-
+/*VIDEO SECTION*/
 .video-section {
     padding: 40px 0;
     text-align: center;
-    background-color: #f9f9f9; /* Optional background color */
+    background-color: #f4d3d389; /* Optional background color */
 }
 
 .video-section h2 {
@@ -349,6 +342,14 @@ body {
 }
 
 /*TICKET POLICIES*/
+/* Artists Section */
+
+
+.artists-section {
+    padding: 20px 0;
+    text-align: center;
+}
+
 .artist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
