@@ -62,6 +62,7 @@ header {
 
 .h1head {
     font-size: 20px;
+    text-shadow: -1px 0 red, 0 1px rgb(246, 234, 6), 1px 0 rgb(44, 4, 220), 0 -1px rgb(229, 6, 192);
 }
 
 .headcont {
